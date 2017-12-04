@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/be_in_demand"
+            android:layout_weight="2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:text="Udacity"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+
+            <TextView
+                android:text="650-555-5555"
+                android:id="@+id/phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:onClick="dialUdacity"/>
+
+            <TextView
+                android:text="www.udacity.com"
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:onClick="goToWebsite"
+                android:clickable="true" />
+
+            <TextView
+                android:text="2465 Latham St, Mountain View, CA 94043"
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:onClick="searchForLocation" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:src="@drawable/nd889" />
+
+        </LinearLayout>
+
+    </LinearLayout>
