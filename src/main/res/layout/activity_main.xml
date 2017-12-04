@@ -1,68 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:src="@drawable/be_in_demand"
-            android:layout_weight="2"/>
+            android:layout_weight="2"
+            android:src="@drawable/be_in_demand" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="16dp"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:layout_margin="16dp">
+            android:orientation="vertical">
 
             <TextView
-                android:text="Udacity"
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/darker_gray"
+                android:padding="8dp"
+                android:text="@string/name"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textStyle="bold"
-                android:padding="8dp"/>
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
 
 
             <TextView
-                android:text="650-555-5555"
                 android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/darker_gray"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textStyle="bold"
+                android:onClick="dialUdacity"
                 android:padding="8dp"
-                android:onClick="dialUdacity"/>
+                android:text="650-555-5555"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
 
             <TextView
-                android:text="www.udacity.com"
                 android:id="@+id/website"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/darker_gray"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textStyle="bold"
-                android:padding="8dp"
+                android:clickable="true"
                 android:onClick="goToWebsite"
-                android:clickable="true" />
+                android:padding="8dp"
+                android:text="@string/website"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
 
             <TextView
-                android:text="2465 Latham St, Mountain View, CA 94043"
                 android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/darker_gray"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textStyle="bold"
+                android:onClick="searchForLocation"
                 android:padding="8dp"
-                android:onClick="searchForLocation" />
+                android:text="@string/location"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -72,3 +75,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
+</ScrollView>
